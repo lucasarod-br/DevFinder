@@ -1,13 +1,17 @@
 export const lightTheme = {
-    background: '#EBF4F8',
-    titles: '#2C2738',
-    text: '#2C2738',
-    accent: '#0880AE',
-  }
-  
-  export const darkTheme = {
-    background: '#1C2025',
-    titles: '#D6E1DF',
-    text: '#D6E1DF',
-    accent: '#8A85FF',
-  }
+  background: "#F6F8FF",
+  mainColor: "#FEFEFE",
+  titles: "#2B3442",
+  text: "#4B6A9B",
+  date: "#697C9A",
+  blue: "#0079FF"
+};
+
+export const darkTheme = {
+  background: "#141D2F",
+  mainColor: "#1E2A47",
+  titles: "#FFFFFF",
+  text: "#FFFFFF",
+  date: "#FFFFFF",
+  blue: "#0079FF"
+};

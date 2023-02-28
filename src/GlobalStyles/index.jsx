@@ -8,7 +8,8 @@ export const GlobalStyle =  createGlobalStyle`
         outline: 0;
         transition: 0.1s;
         font-family: 'Space mono', sans-serif;
-    } 
+    }
+
     
     
     `

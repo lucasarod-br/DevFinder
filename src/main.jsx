@@ -8,7 +8,6 @@ import { GlobalStyle } from './GlobalStyles'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <GlobalStyle/>
     <Home/>
   </React.StrictMode>,
 )
