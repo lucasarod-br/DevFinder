@@ -17,6 +17,7 @@ const Perfil = () => {
       .then((res) => {
         setUser(res.data);
         setIsLoading(false);
+        console.log(res.data)
       })
       .catch((error) => {
         console.error(error);
@@ -34,7 +35,7 @@ const Perfil = () => {
         bio={user.bio}
         isLoading={isLoading}
       />
-      <Numbers />
+      <Numbers repos={user.public_repos} followers={user.followers} following={user.following} />
       <Links />
     </Container>
   );
