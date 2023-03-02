@@ -9,8 +9,7 @@ export const TextBody = styled.p`
 
 export const H1 = styled.h1`
   font-size: 16px;
-
-  color: ${(props) => props.theme.title};
+  color: ${(props) => props.theme.titles};
   @media (min-width: 768px) {
     font-size: 26px;
     
@@ -20,7 +19,7 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
   
   font-size: 16px;
-  color: ${(props) => props.theme.title};
+  color: ${(props) => props.theme.titles};
   @media (min-width: 768px) {
     font-size: 22px;
     line-height: 33px;
