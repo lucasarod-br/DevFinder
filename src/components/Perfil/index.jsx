@@ -36,7 +36,7 @@ const Perfil = () => {
         isLoading={isLoading}
       />
       <Numbers repos={user.public_repos} followers={user.followers} following={user.following} />
-      <Links />
+      <Links location={user.location} blog={user.blog} twitter={user.twitter_username} company={user.company && user.company.split(' ')[0]}/>
     </Container>
   );
 };

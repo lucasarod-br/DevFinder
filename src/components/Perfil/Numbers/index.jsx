@@ -29,7 +29,7 @@ const Numbers = ({repos, followers, following}) => {
   return (
     <StyledNumbers>
 
-    <Number name={'Repos'} value={repos}/>
+    <Number name={'Repos.'} value={repos}/>
     <Number name={'Followers'} value={followers}/>
     <Number name={'Following'} value={following}/>
 
