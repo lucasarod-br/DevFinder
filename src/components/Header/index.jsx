@@ -14,6 +14,9 @@ const StyledHeader = styled.header`
   h1 {
     font-size: 26px;
   }
+  h4 {
+    font-weight: bold;
+  }
   div:hover {
       
       opacity : 50% ;

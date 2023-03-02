@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 import Number from "./Number";
 
@@ -24,10 +25,13 @@ const StyledNumbers = styled.div`
   }
 `;
 
-const Numbers = ({ repos, followers, following }) => {
+const Numbers = () => {
+  const userSearched = useSelector((state) => state.user.userSearched);
+  
+  const { public_repos, followers, following } = userSearched ? userSearched : {}
   return (
     <StyledNumbers>
-      <Number name={"Repos."} value={repos} />
+      <Number name={"Repos."} value={public_repos} />
       <Number name={"Followers"} value={followers} />
       <Number name={"Following"} value={following} />
     </StyledNumbers>

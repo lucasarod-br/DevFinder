@@ -5,6 +5,7 @@ import { FaTwitter } from "react-icons/fa";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import { TextBody } from "../../Texts";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 
 const StyledLinks = styled.div`
   align-self: flex-start;
@@ -44,7 +45,11 @@ const Link = styled.div`
   }
 `;
 
-const Links = ({ location, blog, twitter, company }) => {
+const Links = () => {
+  const userSearched = useSelector((state) => state.user.userSearched);
+
+  const { location, blog, twitter_username, company } = userSearched ? userSearched : {}
+
   const errorMsg = "Not Available";
   return (
     <StyledLinks>
@@ -69,10 +74,10 @@ const Links = ({ location, blog, twitter, company }) => {
         <FaTwitter />
         <TextBody>
           {" "}
-          {twitter ? (
-            <a href={`https://www.twitter.com/${twitter}`} target="_blank">
+          {twitter_username ? (
+            <a href={`https://www.twitter.com/${twitter_username}`} target="_blank">
               {" "}
-              @{twitter}
+              @{twitter_username}
             </a>
           ) : (
             errorMsg
@@ -81,7 +86,7 @@ const Links = ({ location, blog, twitter, company }) => {
       </Link>
       <Link inavaible={!location}>
         <HiBuildingOffice2 />
-        <TextBody>{company ? company : errorMsg}</TextBody>
+        <TextBody>{company ? company.split(" ")[0] : errorMsg}</TextBody>
       </Link>
     </StyledLinks>
   );

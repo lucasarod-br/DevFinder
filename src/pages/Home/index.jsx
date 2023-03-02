@@ -20,7 +20,6 @@ const Styled = styled.div`
 
 const Home = () => {
   const isDarkTheme = useSelector(state => state.theme.isDark)
-  console.log(isDarkTheme)
   return (
     
 

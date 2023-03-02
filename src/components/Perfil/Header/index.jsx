@@ -1,28 +1,28 @@
-import { format } from 'date-fns';
-import React from 'react';
-import { H1, H3, H4 } from '../../Texts';
-import Descriprion from './Description';
-import { StyledHeader } from './style';
+import { format } from "date-fns";
+import React from "react";
+import { useSelector } from "react-redux";
+import { H1, H3, H4 } from "../../Texts";
+import Descriprion from "./Description";
+import { StyledHeader } from "./style";
 
-const Header = ({ img, name, user, created, bio, isLoading }) => {
-  const formattedDate = created && format(new Date(created), 'dd MMM yyyy')
-    
+const Header = () => {
+  const userSearched = useSelector((state) => state.user.userSearched);
+  const { avatar_url, name, twitter_username, created_at, bio } = userSearched ? userSearched : {}
 
+  const formattedDate = created_at && format(new Date(created_at), "dd MMM yyyy");
   return (
     <>
       <StyledHeader>
-        {isLoading ? (
-          <div>Carregando...</div>
-        ) : (
-          <>
-            <img src={img} alt={`${name} github perfil`} />
-            <div>
-              <H1>{name}</H1>
-              <H3>@{user}</H3>
-              <H4>Joined {formattedDate}</H4>
-            </div>
-          </>
-        )}
+        
+        <>
+          <img src={avatar_url} alt={`${name} github perfil`} />
+          <div>
+            <H1>{name}</H1>
+            <H3>@{twitter_username}</H3>
+            <H4>Joined {formattedDate}</H4>
+          </div>
+        </>
+        
       </StyledHeader>
       <Descriprion bio={bio} />
     </>
@@ -30,4 +30,3 @@ const Header = ({ img, name, user, created, bio, isLoading }) => {
 };
 
 export default Header;
-  
