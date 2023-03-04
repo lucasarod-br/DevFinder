@@ -16,6 +16,8 @@ const StyledSearch = styled.div`
   background-color: ${(props) => props.theme.mainColor};
   border-radius: 15px;
   column-gap: 4px;
+  box-shadow: 0px 16px 30px -10px #4660BB33;
+
   input {
     background-color: ${(props) => props.theme.mainColor};
     border: none;

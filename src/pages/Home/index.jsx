@@ -35,10 +35,7 @@ const Home = () => {
       <Styled>
         <Header />
         <Search/>
-        { userSearched ? (
-        <Perfil />)
-        : <h2>Search a username above</h2>
-        }
+        { userSearched && <Perfil />}
       </Styled>
     </ThemeProvider>
   );
