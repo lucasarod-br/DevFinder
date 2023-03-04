@@ -17,8 +17,8 @@ const Styled = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  gap: 30px;
-  padding-top: 16px;
+  gap: 20px;
+  padding-top: 12px;
 `;
 
 const Home = () => {
