@@ -16,14 +16,14 @@ const Styled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 20px;
   padding-top: 12px;
 `;
 
 const Home = () => {
   const isDarkTheme = useSelector(state => state.theme.isDark)
-  const userSearched = useSelector((state) => state.user.userSearched);
+
 
   return (
     
@@ -35,7 +35,7 @@ const Home = () => {
       <Styled>
         <Header />
         <Search/>
-        { userSearched && <Perfil />}
+        <Perfil />
       </Styled>
     </ThemeProvider>
   );

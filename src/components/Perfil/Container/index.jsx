@@ -14,7 +14,10 @@ export const Container = styled.main`
     width: 90%;
     max-width: 730px;
     box-shadow: 0px 16px 30px -10px #4660BB33;
+    min-height: 419px;
+    max-height: 517px;
 
+    height: 71%;
     @media (min-width: 768px) {
         padding: 40px;
     }

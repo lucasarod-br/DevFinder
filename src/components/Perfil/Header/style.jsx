@@ -4,7 +4,7 @@ export const StyledHeader = styled.div`
   /* align-self: center;
 display: flex;
 justify-content: space-around; */
-  align-self: flex-start;
+  justify-self: flex-start;
   column-gap: 20px;
   text-align: justify;
 
