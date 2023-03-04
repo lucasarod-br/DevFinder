@@ -10,7 +10,5 @@ const store = configureStore({
     },
 }) 
 
-store.dispatch(fetchUser())
-
 
 export default store

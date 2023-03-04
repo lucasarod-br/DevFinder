@@ -14,6 +14,7 @@ const StyledLinks = styled.div`
   grid-template-columns: 1fr;
   width: 100%;
   margin-top: 30px;
+  gap: 10px;
   @media (min-width: 768px) {
     align-self: none;
 
@@ -32,7 +33,7 @@ const Link = styled.div`
   justify-content: start;
   gap: 12px;
   text-decoration: none;
-  opacity: ${(props) => (props.inavaible ? "40%" : "100%")};
+  opacity: ${(props) => (props.inavaible ? "60%" : "100%")};
 
   a:first-child:hover {
     text-decoration: underline;
@@ -47,7 +48,7 @@ const Link = styled.div`
 
 const Links = () => {
   const userSearched = useSelector((state) => state.user.userSearched);
-
+  console.log(userSearched)
   const { location, blog, twitter_username, company } = userSearched ? userSearched : {}
 
   const errorMsg = "Not Available";
@@ -55,9 +56,9 @@ const Links = () => {
     <StyledLinks>
       <Link inavaible={!location}>
         <IoLocationSharp />
-        <TextBody> {location ? location.split(",")[1] : errorMsg} </TextBody>
+        <TextBody> {location ? location : errorMsg} </TextBody>
       </Link>
-      <Link inavaible={!location}>
+      <Link inavaible={!blog}>
         <FiLink />
         <TextBody>
           {" "}
@@ -70,10 +71,9 @@ const Links = () => {
           )}{" "}
         </TextBody>
       </Link>
-      <Link inavaible={!location}>
+      <Link inavaible={!twitter_username}>
         <FaTwitter />
         <TextBody>
-          {" "}
           {twitter_username ? (
             <a href={`https://www.twitter.com/${twitter_username}`} target="_blank">
               {" "}
@@ -81,10 +81,10 @@ const Links = () => {
             </a>
           ) : (
             errorMsg
-          )}{" "}
+          )}
         </TextBody>
       </Link>
-      <Link inavaible={!location}>
+      <Link inavaible={!company}>
         <HiBuildingOffice2 />
         <TextBody>{company ? company.split(" ")[0] : errorMsg}</TextBody>
       </Link>

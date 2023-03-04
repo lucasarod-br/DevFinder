@@ -8,6 +8,7 @@ export const TextBody = styled.p`
 `;
 
 export const H1 = styled.h1`
+white-space: nowrap;
   font-size: 16px;
   color: ${(props) => props.theme.titles};
   @media (min-width: 768px) {

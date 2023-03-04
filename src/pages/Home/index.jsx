@@ -5,6 +5,7 @@ import Perfil from "../../components/Perfil";
 import { GlobalStyle } from "../../GlobalStyles";
 import { darkTheme, lightTheme } from "../../GlobalStyles/themes";
 import { useSelector } from 'react-redux'
+import Search from "../../components/Search";
 
 
 
@@ -15,19 +16,29 @@ const Styled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: start;
+  gap: 30px;
+  padding-top: 16px;
 `;
 
 const Home = () => {
   const isDarkTheme = useSelector(state => state.theme.isDark)
+  const userSearched = useSelector((state) => state.user.userSearched);
+
   return (
     
 
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyle />
+      
+
       <Styled>
         <Header />
-        <Perfil />
+        <Search/>
+        { userSearched ? (
+        <Perfil />)
+        : <h2>Search a username above</h2>
+        }
       </Styled>
     </ThemeProvider>
   );
