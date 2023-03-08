@@ -16,7 +16,7 @@ const Styled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   gap: 20px;
   padding-top: 12px;
 `;

@@ -1,9 +1,7 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.div`
-  /* align-self: center;
-display: flex;
-justify-content: space-around; */
+
   justify-self: flex-start;
   column-gap: 20px;
   text-align: justify;
