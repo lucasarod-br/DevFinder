@@ -1,5 +1,5 @@
 # DevFinder
-Aplicação consome da API do github o username, exibindo um card com as informações retornadas da conta como em uma rede social. Busca pelos dados feita com axios, estilização com css-in-js e funcionalidade de toggle theme. <br><br>
+AO DevFinder é um projeto criado a partir de um desafio, que consome a API do GitHub. Com uma interface semelhante a uma rede social, é possível pesquisar pelo nome de um usuário e visualizar informações relevantes, como repositórios e seguidores. <br><br>
 Projeto baseado no desafio de nível júnior do Front-end Mentor. Link abaixo: <br>
 https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6
 
